@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "brushface"
+version = "0.1.0"
+description = ""
+authors = ["LTFan <xfqwdsj@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fire = "^0.6.0"
+torch = {version = "^2.2.1", source = "torch"}
+torchvision = {version = "^0.17.1", source = "torch"}
+torchaudio = {version = "^2.2.1", source = "torch"}
+keras = "^3.0.5"
+numpy = "^1.26.4"
+pandas = "^2.2.1"
+gdown = "^5.1.0"
+opencv-python = {version = "^4.9.0.80"}
+facenet-pytorch = {version = "^2.5.3", optional = true}
+dlib = {version = "^19.24.2", optional = true}
+ultralytics = {version = "^8.1.26", optional = true}
+
+[tool.poetry.extras]
+fastmtcnn = ["facenet-pytorch"]
+dlib = ["dlib"]
+yolo = ["ultralytics"]
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
