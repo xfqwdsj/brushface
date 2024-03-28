@@ -18,7 +18,7 @@ gdown = "^5.1.0"
 opencv-python = {version = "^4.9.0.80"}
 facenet-pytorch = {version = "^2.5.3", optional = true}
 dlib = {version = "^19.24.2", optional = true}
-ultralytics = {version = "^8.1.26", optional = true}
+ultralytics = {version = "^8.1.35", optional = true}
 
 [tool.poetry.extras]
 fastmtcnn = ["facenet-pytorch"]
